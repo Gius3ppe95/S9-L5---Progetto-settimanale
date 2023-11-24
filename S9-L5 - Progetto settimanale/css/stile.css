@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenitore {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.contenitore div {
+  background: rgb(255, 224, 178);
+  background: linear-gradient(180deg, rgba(255, 224, 178, 1) 3%, rgba(255, 255, 255, 1) 58%);
+  width: 30%;
+  height: 400px;
+  text-align: center;
+  padding: 3rem auto;
+  margin: 1rem auto;
+  box-sizing: border-box;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+  .contenitore div {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .contenitore div {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .contenitore div {
+    width: 15%;
+  }
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.ico1,
+.ico2 {
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: large;
+}
+
+.ico1 {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.ico1:hover {
+  background-color: #388e3c;
+  animation: sopra 0.5s infinite;
+}
+
+.ico2 {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.ico2:hover {
+  background-color: #d32f2f;
+  animation: sopra 0.5s infinite;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@keyframes sopra {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+div p button {
+  border-radius: 20%;
+  padding: 0.5rem;
+  margin: 0 0.2rem;
+  font-size: larger;
+  background-color: #faba72;
+}
+
+div p button:hover {
+  background-color: #7a4814;
+  color: white;
+  animation: pulsa 1s infinite ease-in-out alternate;
+}
+
+@keyframes pulsa {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
